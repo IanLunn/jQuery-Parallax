@@ -1,0 +1,136 @@
+/*
+Plugin: jQuery Parallax
+Version 1.1
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
+
+License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/.
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+}
+
+p{
+	margin: 0 0 20px 0;	
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+}
+
+img{
+	border: 0;
+}
+
+h1, #pixels{
+	font-family:"Museo 900", Verdana, serif;
+	font-size-adjust:0.40;
+	font-weight:700;
+	font-style:normal;
+}
+
+h2{
+	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+	font-size-adjust:0.531;
+	font-weight:500;
+	font-style:normal;
+}
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0;
+	text-align: center;
+}
+
+#nav{
+	list-style: none;
+	position: fixed;
+	right: 20px;
+}
+
+#nav li{
+	margin: 0 0 15px 0;	
+}
+
+#header, #intro, #second{
+	width: 100%;
+}
+
+#intro{
+	background:url(images/firstBG.jpg) 50% -75px no-repeat fixed;
+	color: white;
+	height: 600px;
+	margin: 0 auto;
+	padding: 160px 0 0 0;
+}
+
+#second{
+	background: url(images/secondBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+
+#second .bg{
+	background: url(images/trainers.png) 50% 0 no-repeat fixed;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 900px;
+	z-index: 200;
+}
+
+#third{
+	background: url(images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;	
+}
+
+#fifth{
+	background: #ccc;
+	height: 400px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+.story{
+	margin: 0 auto;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;	
+}

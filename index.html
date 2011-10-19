@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Parallax Plugin Demo</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav').localScroll(800);
+	
+	RepositionNav();
+	
+	$(window).resize(function(){
+		RepositionNav();
+	});	
+	
+	//.moveRelative() options:
+	//x position
+	//adjuster (y position to start from)
+	//inertia (speed to move relative to vertical scroll)
+	//outerHeight (true/false)
+	$('#intro, #second').moveRelative("50%", 0, 0.1, true);
+	$('#third').moveRelative("50%", 2750, 0.3, true);
+	$('.bg').moveRelative("50%", 2150, 0.4, true);
+
+})
+</script>
+</head>
+
+<body>
+	<ul id="nav">
+		<li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#fifth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	</ul>
+	
+	<div id="intro">
+		<div class="story">
+	    	<div class="float-left">
+			<h2>(Almost) Static Background</h2>
+	        <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+	
+	<div id="second">
+		<div class="story"><div class="bg"></div>
+	    	<div class="float-right">
+	            <h2>Multiple Backgrounds</h2>
+	            <p>The multiple backgrounds applied to this section are moved in a similar way to the first section -- every time the user scrolls down the page by a pixel, the positions of the backgrounds are changed.</p>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#second-->
+	
+	<div id="third">
+		<div class="story">
+	    	<div class="float-left">
+	        	<h2>What Happens When JavaScript is Disabled?</h2>
+	            <p>The user gets a slap! Actually, all that jQuery does is moves the backgrounds relative to the position of the scrollbar. Without it, the backgrounds simply stay put and the user would never know they are missing out on the awesome! CSS2 does a good enough job to still make the effect look cool.</p>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#third-->
+	
+	<div id="fifth">
+		<div class="story">
+	            <p>This demo is based on the <a href="http://www.nikebetterworld.com" title="Nike Better World">Nikebetterworld.com</a> website.</p>
+	            
+	        <h2>Credits</h2>
+	        <p>This plugin makes use of some scripts and images made by others:</p>
+	        <ul>
+	        	<li><a href="http://flesler.blogspot.com/2007/10/jqueryscrollto.html" title="jQuery ScrollTo">jQuery ScrollTo</a></li>
+	            <li><a href="http://www.fontdeck.com/" title="Licensed fonts from FontDeck">Licensed fonts from FontDeck</a></li>
+	            <li><a href="http://downloads.dvq.co.nz/" title="Background Textures">Wooden and Pyschedlic Background Textures</a></li>
+	            <li><a href="http://www.sxc.hu/photo/931435" title="Trainers Image">Trainers Image</a></li>
+	            <li><a href="http://www.sxc.hu/photo/1015485" title="Basketball Image">Basketball Image</a></li>
+	            <li><a href="http://www.sxc.hu/photo/563767" title="Bottles Image">Bottles Image</a></li>
+	        </ul>
+	
+	    </div> <!--.story-->
+	</div> <!--#fifth-->
+</body>
+</html>
