@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>jQuery Parallax Plugin Demo</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.parallax-1.1.js"></script>
 <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
@@ -17,14 +18,15 @@ $(document).ready(function(){
 		RepositionNav();
 	});	
 	
-	//.moveRelative() options:
-	//x position
-	//adjuster (y position to start from)
-	//inertia (speed to move relative to vertical scroll)
-	//outerHeight (true/false)
-	$('#intro, #second').moveRelative("50%", 0, 0.1, true);
-	$('#third').moveRelative("50%", 2750, 0.3, true);
-	$('.bg').moveRelative("50%", 2150, 0.4, true);
+	//.parallax(xPosition, adjuster, inertia, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//adjuster - y position to start from
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0, 0.1, true);
+	$('#second').parallax("50%", 0, 0.1, true);
+	$('.bg').parallax("50%", 2500, 0.4, true);
+	$('#third').parallax("50%", 2750, 0.3, true);
 
 })
 </script>
@@ -81,6 +83,8 @@ $(document).ready(function(){
 	            <li><a href="http://www.sxc.hu/photo/1015485" title="Basketball Image">Basketball Image</a></li>
 	            <li><a href="http://www.sxc.hu/photo/563767" title="Bottles Image">Bottles Image</a></li>
 	        </ul>
+	        
+	        <p class="center">P.S - You've scrolled <span id="pixels">0</span> Pixels. Oh Yeah!</p>
 	
 	    </div> <!--.story-->
 	</div> <!--#fifth-->

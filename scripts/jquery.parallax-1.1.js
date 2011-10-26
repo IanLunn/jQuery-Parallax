@@ -21,7 +21,7 @@ function RepositionNav(){
 
 
 (function( $ ){
-	$.fn.moveRelative = function(xpos, adjuster, inertia, outerHeight) {
+	$.fn.parallax = function(xpos, adjuster, inertia, outerHeight) {
 			
 function inView(pos, element){
 	
@@ -79,6 +79,8 @@ function inView(pos, element){
 		$window.bind('scroll', function(){ //when the user is scrolling...
 			var pos = $window.scrollTop(); //position of the scrollbar
 			inView(pos, $this);
+			
+			$('#pixels').html(pos);
 		})
 	}
 })( jQuery );
