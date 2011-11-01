@@ -68,7 +68,7 @@ function inView(pos, element){
 		$this.css({'backgroundPosition': newPos(xpos, outerHeight, adjuster, inertia)}); 
 		
 		function newPos(xpos, windowHeight, pos, adjuster, inertia){
-			return xpos + Math.round((-((windowHeight + pos) - adjuster) * inertia)) + "px";
+			return xpos + " " + Math.round((-((windowHeight + pos) - adjuster) * inertia)) + "px";
 		}
 		
 		//function to be called whenever the window is scrolled or resized
