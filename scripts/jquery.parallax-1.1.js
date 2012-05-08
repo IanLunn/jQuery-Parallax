@@ -1,6 +1,6 @@
 /*
 Plugin: jQuery Parallax
-Version 1.1
+Version 1.1.2
 Author: Ian Lunn
 Author URL: http://www.ianlunn.co.uk/
 Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
@@ -33,15 +33,9 @@ http://www.gnu.org/licenses/gpl.html
 		}
 			
 		// setup defaults if arguments aren't specified
-		if (arguments.length < 1 || xpos === null) {
-			xpos = "50%"
-		}
-		if (arguments.length < 2 || adjuster === null){
-			adjuster = 0;
-		}
-		if (arguments.length < 3 || speedFactor === null){
-			speedFactor = 0.1
-		}
+		if (arguments.length < 1 || xpos === null) xpos = "50%";
+		if (arguments.length < 2 || adjuster === null) adjuster = 0;
+		if (arguments.length < 3 || speedFactor === null) speedFactor = 0.1;
 		
 		// function to be called whenever the window is scrolled or resized
 		function update(){
@@ -63,5 +57,5 @@ http://www.gnu.org/licenses/gpl.html
 
 		$window.bind('scroll', update).resize(update);
 		update();
-	}
+	};
 })( jQuery );
